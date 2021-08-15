@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@foreign-contacts/api-interfaces';
 
 @Component({
   selector: 'foreign-contacts-root',
@@ -8,6 +6,9 @@ import { Message } from '@foreign-contacts/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title= 'Contacts';
+  links= [
+    {path: '', icon: 'home', title:'Home'},
+    {path: 'contacts', icon: 'view_list', title: 'Contacts'}
+  ]
 }

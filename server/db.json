@@ -1,0 +1,11 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Nicole Nogueira da Silva",
+      "nationality": "Brasileira",
+      "natureOfRelationship": "Dating",
+      "threat": 1
+    }
+  ]
+}

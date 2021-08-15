@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="col-50" layout="row" layout-align="center center">
+      <foreign-contacts-contact-list
+        [contacts]="allContacts$ | async"
+        (selected)="selectContact($event)"
+        (deleted)="deleteContact($event)"
+      ></foreign-contacts-contact-list>
+    </div>
+    <div class="col-50" layout="row" layout-align="center center">
+      <foreign-contacts-contact-details
+        [contact]="selectedContact$ | async"
+        (saved)="saveContact($event)"
+        (cancelled)="resetContact()"
+        [form]="form"
+      ></foreign-contacts-contact-details>
+    </div>
+  </div>
